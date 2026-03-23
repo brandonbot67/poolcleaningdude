@@ -2,7 +2,7 @@ import { siteConfig } from "@/lib/config";
 
 export default function CTABanner({
   headline = "Ready for a Clean Pool?",
-  subtext = "No contracts. No hassle. Just crystal clear water.",
+  subtext = "No contracts. No hassle. Crystal clear water.",
 }: {
   headline?: string;
   subtext?: string;

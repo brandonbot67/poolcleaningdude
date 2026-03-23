@@ -7,7 +7,7 @@ import CTABanner from "@/components/CTABanner";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Pool Cleaning Dude is a locally owned pool service in Delaware. No corporate overhead, no contracts, no runaround — just honest pool care from people who give a damn.",
+    "Pool Cleaning Dude is a locally owned pool service on the Main Line and Northern Delaware. No corporate overhead, no contracts, no runaround. Honest pool care from people who give a damn.",
   alternates: {
     canonical: `${siteConfig.url}/about`,
   },
@@ -114,7 +114,7 @@ export default function AboutPage() {
 
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-3">
-              Part of the Tri-State Aquatic Family
+              Backed by Tri-State Aquatic Solutions
             </h2>
             <p className="text-gray-600 leading-relaxed">
               Pool Cleaning Dude is the service and maintenance arm of Tri-State

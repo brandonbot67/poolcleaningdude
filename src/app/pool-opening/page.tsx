@@ -82,7 +82,7 @@ export default function PoolOpeningPage() {
               When Should You Open Your Pool?
             </h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              In Delaware, most pools should be opened between late March and
+              In our area, most pools should be opened between late March and
               mid-April. The earlier you open, the less likely you are to deal
               with algae and staining from stagnant winter water. We start
               booking pool openings in February, and spots fill up fast.

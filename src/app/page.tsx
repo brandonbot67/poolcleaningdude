@@ -14,9 +14,9 @@ export default function Home() {
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-8">
             Pool Cleaning Dude keeps your pool crystal clear all season long.
-            Reliable weekly service, honest pricing, and zero long-term
-            commitments. Serving the Main Line, Chester County, Delaware
-            County, and Northern Delaware.
+            Reliable weekly service, honest pricing, and no long-term
+            commitments. Serving the Main Line, Chester County, and
+            Northern Delaware.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -56,7 +56,7 @@ export default function Home() {
           </h2>
           <p className="text-gray-600 text-center max-w-2xl mx-auto mb-12">
             We keep it simple. You call, we show up, your pool stays clean. No
-            upsells, no runaround, no corporate nonsense.
+            upsells, no runaround.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {siteConfig.services.map((service) => (
