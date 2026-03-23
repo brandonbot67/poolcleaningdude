@@ -7,7 +7,7 @@ import CTABanner from "@/components/CTABanner";
 export const metadata: Metadata = {
   title: "Pool Opening Service",
   description:
-    "Professional pool opening service in Delaware and the Tri-State area. Cover removal, green-to-clean, chemical balancing, and equipment startup. Book your spring pool opening today.",
+    "Professional pool opening service on the Main Line PA and Northern Delaware. Cover removal, green-to-clean, chemical balancing, and equipment startup. Book your spring pool opening today.",
   alternates: {
     canonical: `${siteConfig.url}/pool-opening`,
   },
@@ -25,7 +25,7 @@ export default function PoolOpeningPage() {
       <JsonLd
         data={serviceSchema(
           "Pool Opening Service",
-          "Professional spring pool opening service including cover removal, equipment startup, green-to-clean treatment, and full chemical balancing. Serving Delaware and the Tri-State area.",
+          "Professional spring pool opening service including cover removal, equipment startup, green-to-clean treatment, and full chemical balancing. Serving the Main Line PA and Northern Delaware.",
           "Delaware"
         )}
       />

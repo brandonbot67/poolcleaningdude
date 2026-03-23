@@ -9,14 +9,14 @@ export default function Home() {
       <section className="bg-gradient-to-b from-sky-50 to-white py-16 sm:py-24 px-4">
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 mb-4">
-            Your Pool Guy in Delaware.{" "}
+            Your Pool Guy on the Main Line.{" "}
             <span className="text-sky-600">No Contracts.</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-8">
             Pool Cleaning Dude keeps your pool crystal clear all season long.
             Reliable weekly service, honest pricing, and zero long-term
-            commitments. Serving Newark, Hockessin, Pike Creek, and the
-            Tri-State area.
+            commitments. Serving the Main Line, Chester County, Delaware
+            County, and Northern Delaware.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -115,11 +115,12 @@ export default function Home() {
       <section className="py-16 px-4">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Serving Delaware &amp; the Tri-State Area
+            Serving the Main Line PA &amp; Northern Delaware
           </h2>
           <p className="text-gray-600 mb-8">
-            We clean pools across Northern Delaware and Southeast Pennsylvania.
-            If you&apos;re nearby, we&apos;ve got you covered.
+            We clean pools across the Main Line, Chester County, Delaware
+            County, and Northern Delaware. If you&apos;re nearby, we&apos;ve
+            got you covered.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             {siteConfig.serviceAreas.map((area) => (

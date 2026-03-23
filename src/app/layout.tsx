@@ -15,7 +15,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Pool Cleaning Dude | No-Contract Pool Service in Delaware",
+    default: "Pool Cleaning Dude | No-Contract Pool Service | Main Line PA & Northern DE",
     template: "%s | Pool Cleaning Dude",
   },
   description: siteConfig.description,
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: "Pool Cleaning Dude | No-Contract Pool Service in Delaware",
+    title: "Pool Cleaning Dude | No-Contract Pool Service | Main Line PA & Northern DE",
     description: siteConfig.description,
   },
   alternates: {

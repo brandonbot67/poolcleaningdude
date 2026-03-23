@@ -6,7 +6,7 @@ import { breadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with Pool Cleaning Dude for a free quote on pool cleaning services in Delaware and the Tri-State area. Call or fill out our form.",
+    "Get in touch with Pool Cleaning Dude for a free quote on pool cleaning services on the Main Line PA and Northern Delaware. Call or fill out our form.",
   alternates: {
     canonical: `${siteConfig.url}/contact-us`,
   },
@@ -57,9 +57,10 @@ export default function ContactPage() {
                   Service Area
                 </h2>
                 <p className="text-gray-600">
-                  Hockessin, Pike Creek, Newark, Greenville, Wilmington (DE)
-                  and Chadds Ford, Glen Mills, West Chester (PA). If
-                  you&apos;re nearby, we probably cover your area too.
+                  The Main Line (Gladwyne, Villanova, Bryn Mawr, Wayne,
+                  Radnor, and more), Chester and Delaware Counties, and
+                  Northern Delaware (Hockessin, Greenville, Wilmington, Newark).
+                  If you&apos;re nearby, we probably cover your area too.
                 </p>
               </div>
 

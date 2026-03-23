@@ -12,7 +12,7 @@ export default function Footer() {
               Pool Cleaning Dude
             </h3>
             <p className="text-sm leading-relaxed">
-              {siteConfig.tagline} Serving Delaware and the Tri-State area with
+              {siteConfig.tagline} Serving the Main Line PA and Northern Delaware with
               honest, reliable pool service.
             </p>
             <a

@@ -7,7 +7,7 @@ import CTABanner from "@/components/CTABanner";
 export const metadata: Metadata = {
   title: "Pool Cleaning Services",
   description:
-    "Weekly pool cleaning, pool openings, one-time cleanings, chemical balancing, and more. No contracts. Serving Delaware and the Tri-State area.",
+    "Weekly pool cleaning, pool openings, one-time cleanings, chemical balancing, and more. No contracts. Serving the Main Line PA and Northern Delaware.",
   alternates: {
     canonical: `${siteConfig.url}/services`,
   },
@@ -104,7 +104,7 @@ export default function ServicesPage() {
       <JsonLd
         data={serviceSchema(
           "Pool Cleaning and Maintenance Services",
-          "Weekly pool cleaning, pool openings, closings, one-time cleanings, chemical balancing, and equipment checks. No contracts. Serving Delaware and the Tri-State area."
+          "Weekly pool cleaning, pool openings, closings, one-time cleanings, chemical balancing, and equipment checks. No contracts. Serving the Main Line PA and Northern Delaware."
         )}
       />
 
