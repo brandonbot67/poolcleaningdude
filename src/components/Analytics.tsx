@@ -15,8 +15,10 @@ export default function Analytics() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if ((window as { posthog?: { capture: (...args: unknown[]) => void } }).posthog?.capture) {
-      (window as { posthog: { capture: (...args: unknown[]) => void } }).posthog.capture("$pageview", { $current_url: pathname });
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const ph = (window as any).posthog;
+    if (ph?.capture) {
+      ph.capture("$pageview", { $current_url: pathname });
     }
   }, [pathname]);
 
