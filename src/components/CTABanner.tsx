@@ -1,4 +1,5 @@
 import { siteConfig } from "@/lib/config";
+import OpenChatButton from "@/components/OpenChatButton";
 
 export default function CTABanner({
   headline = "Ready for a Clean Pool?",
@@ -21,12 +22,11 @@ export default function CTABanner({
           >
             Call {siteConfig.phoneFormatted}
           </a>
-          <a
-            href="/contact-us"
+          <OpenChatButton
             className="inline-flex items-center gap-2 rounded-full border-2 border-white px-6 py-3 text-sm font-semibold text-white hover:bg-sky-700 transition-colors"
           >
             Get a Free Quote
-          </a>
+          </OpenChatButton>
         </div>
       </div>
     </section>

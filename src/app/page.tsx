@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/config";
 import CTABanner from "@/components/CTABanner";
+import OpenChatButton from "@/components/OpenChatButton";
 
 function WaveDecoration() {
   return (
@@ -94,12 +95,11 @@ export default function Home() {
               </svg>
               Call {siteConfig.phoneFormatted}
             </a>
-            <Link
-              href="/contact-us"
+            <OpenChatButton
               className="inline-flex items-center gap-2 rounded-full border-2 border-white/40 bg-white/10 backdrop-blur-sm px-8 py-3.5 text-base font-semibold text-white hover:bg-white/20 transition-colors"
             >
               Get a Free Quote
-            </Link>
+            </OpenChatButton>
           </div>
           {/* Van photo */}
           <div className="mt-12 mx-auto max-w-2xl">
