@@ -18,6 +18,7 @@ Pool Cleaning Dude is the **maintenance/service sub-brand** of Tri-State Aquatic
 - **DNS:** GoDaddy, A record → 76.76.21.21, www CNAME → cname.vercel-dns.com
 - **Pages:** 27 total (homepage, services, contact-us, pool-opening, about, 22 area pages)
 - **Contact form:** Wired to GHL PCD sub-account (location: GRCLPh6B7KwWCf8PRIUt)
+- **GHL Login:** brandonbot67@gmail.com (NOT brandon@boothlaunchpad.com — that email has no MX records)
 - **Analytics:**
   - PostHog: `phc_coeTLrzdu6Sa1QamyXR3ysiKdlagXCT322TPjRDDxUU` (PCD-specific project)
   - GTM: `GTM-WK69CW77` (PCD-specific container)
