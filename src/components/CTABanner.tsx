@@ -1,5 +1,5 @@
 import { siteConfig } from "@/lib/config";
-import OpenChatButton from "@/components/OpenChatButton";
+import { smsHref, telHref } from "@/lib/contact";
 
 export default function CTABanner({
   headline = "Ready for a Clean Pool?",
@@ -17,16 +17,17 @@ export default function CTABanner({
         <p className="text-sky-100 mb-6">{subtext}</p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href={`tel:${siteConfig.phone}`}
+            href={smsHref()}
             className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-sky-700 hover:bg-sky-50 transition-colors"
+          >
+            Text Us
+          </a>
+          <a
+            href={telHref()}
+            className="inline-flex items-center gap-2 rounded-full border-2 border-white px-6 py-3 text-sm font-semibold text-white hover:bg-sky-700 transition-colors"
           >
             Call {siteConfig.phoneFormatted}
           </a>
-          <OpenChatButton
-            className="inline-flex items-center gap-2 rounded-full border-2 border-white px-6 py-3 text-sm font-semibold text-white hover:bg-sky-700 transition-colors"
-          >
-            Get a Free Quote
-          </OpenChatButton>
         </div>
       </div>
     </section>

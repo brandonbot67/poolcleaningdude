@@ -2,10 +2,12 @@ export const siteConfig = {
   name: "Pool Cleaning Dude",
   tagline: "Your Pool Guy. No Contracts. Just Clean Water.",
   description:
-    "Pool Cleaning Dude provides reliable, no-contract pool cleaning and maintenance services across the Main Line PA and Northern Delaware. Weekly cleaning, pool openings, and more.",
+    "Pool Cleaning Dude provides reliable, no-contract pool cleaning, repair help, openings, and maintenance across the Main Line PA and Northern Delaware.",
   url: "https://poolcleaningdude.com",
   phone: "302-496-6367",
+  phoneDigits: "3024966367",
   phoneFormatted: "(302) 496-6367",
+  smsBody: "Hey, I need pool service.",
   email: "info@poolcleaningdude.com",
   address: {
     street: "Hockessin",
@@ -49,22 +51,25 @@ export const siteConfig = {
       name: "Weekly Pool Cleaning",
       slug: "weekly-cleaning",
       shortDesc: "Regular maintenance to keep your pool sparkling all season.",
+      startingAt: "$150/week",
     },
     {
       name: "Pool Opening",
       slug: "pool-opening",
-      shortDesc:
-        "Spring startup service — we handle the cover, chemicals, and equipment.",
+      shortDesc: "Cover off, equipment running, water treated.",
+      startingAt: "$400",
     },
     {
       name: "Pool Closing",
       slug: "pool-closing",
-      shortDesc: "Winterization done right so your pool is ready next spring.",
+      shortDesc: "Cover on, equipment off, pool set for winter.",
+      startingAt: "$400",
     },
     {
       name: "One-Time Cleaning",
       slug: "one-time-cleaning",
       shortDesc: "Green pool? Party prep? We got you.",
+      startingAt: "$225",
     },
     {
       name: "Chemical Balancing",
@@ -72,9 +77,10 @@ export const siteConfig = {
       shortDesc: "Water chemistry dialed in for safe, clear water.",
     },
     {
-      name: "Equipment Check",
-      slug: "equipment-check",
-      shortDesc: "Pump, filter, heater — we inspect it all.",
+      name: "Pool Repairs & Equipment Checks",
+      slug: "pool-repairs-equipment-checks",
+      shortDesc:
+        "Pump, filter, heater, salt system, or cleaner acting weird? We inspect it and tell you the honest next step.",
     },
   ],
   testimonials: [

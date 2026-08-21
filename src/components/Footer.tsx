@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/config";
+import { smsHref } from "@/lib/contact";
 
 export default function Footer() {
   return (
@@ -16,10 +17,10 @@ export default function Footer() {
               honest, reliable pool service.
             </p>
             <a
-              href={`tel:${siteConfig.phone}`}
+              href={smsHref()}
               className="inline-block mt-4 text-sky-400 font-semibold hover:text-sky-300"
             >
-              {siteConfig.phoneFormatted}
+              Text {siteConfig.phoneFormatted}
             </a>
           </div>
 
@@ -37,6 +38,11 @@ export default function Footer() {
               <li>
                 <Link href="/pool-opening" className="hover:text-white transition-colors">
                   Pool Opening
+                </Link>
+              </li>
+              <li>
+                <Link href="/pool-closing" className="hover:text-white transition-colors">
+                  Pool Closing
                 </Link>
               </li>
               <li>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { siteConfig } from "@/lib/config";
+import { smsHref, telHref } from "@/lib/contact";
 import { getArea, getAllAreaSlugs, areas } from "@/lib/areas";
 import JsonLd from "@/components/JsonLd";
 import { serviceSchema, breadcrumbSchema } from "@/lib/schema";
@@ -73,10 +74,16 @@ export default async function AreaPage({
             week, keep your water crystal clear, and never lock you into a
             contract.
           </p>
-          <div className="mt-6">
+          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
-              href={`tel:${siteConfig.phone}`}
+              href={smsHref()}
               className="inline-flex items-center gap-2 rounded-full bg-sky-600 px-8 py-3.5 text-base font-semibold text-white shadow-md hover:bg-sky-700 transition-colors"
+            >
+              Text Us
+            </a>
+            <a
+              href={telHref()}
+              className="inline-flex items-center gap-2 rounded-full border border-sky-200 px-8 py-3.5 text-base font-semibold text-sky-700 hover:bg-sky-50 transition-colors"
             >
               Call {siteConfig.phoneFormatted}
             </a>

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/config";
+import { smsHref, telHref } from "@/lib/contact";
 import CTABanner from "@/components/CTABanner";
-import OpenChatButton from "@/components/OpenChatButton";
 
 function WaveDecoration() {
   return (
@@ -54,6 +54,29 @@ function PoolBubbles() {
   );
 }
 
+const highIntentReasons = [
+  {
+    title: "Weekly Route Spots",
+    text: "For homeowners who want the pool handled every week without chasing a pool guy. Starts at $150/week.",
+  },
+  {
+    title: "Pool Closing",
+    text: "Cover on, equipment off. Starts at $400. Dates go first in September and October.",
+    href: "/pool-closing",
+  },
+  {
+    title: "Repair Help",
+    text: "Pump, filter, heater, salt system, or cleaner problems get an honest next step.",
+  },
+];
+
+const routeSignals = [
+  "Photo report after weekly visits",
+  "Licensed and insured",
+  "40-pool route cap this season",
+  "No contracts",
+];
+
 export default function Home() {
   return (
     <>
@@ -76,41 +99,51 @@ export default function Home() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-4 drop-shadow-md">
-            Your Pool Guy on the Main Line.{" "}
-            <span className="text-cyan-300">No Contracts.</span>
+            Main Line Pool Service for People Who Want It{" "}
+            <span className="text-cyan-300">Handled.</span>
           </h1>
           <p className="text-lg sm:text-xl text-sky-100 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Pool Cleaning Dude keeps your pool crystal clear all season long.
-            Reliable weekly service, honest pricing, and no long-term
-            commitments. Serving the Main Line, Chester County, and
-            Northern Delaware.
+            Weekly cleaning, openings, green-to-clean rescues, and repair help
+            from a local pool guy who shows up. No contracts, no corporate
+            runaround, and no guessing what happened after the visit.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href={`tel:${siteConfig.phone}`}
+            <Link
+              href="/contact-us"
               className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-3.5 text-base font-semibold text-sky-700 shadow-lg hover:bg-sky-50 transition-colors"
             >
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-              </svg>
-              Call {siteConfig.phoneFormatted}
-            </a>
-            <OpenChatButton
+              Get on the Route
+            </Link>
+            <a
+              href={smsHref()}
               className="inline-flex items-center gap-2 rounded-full border-2 border-white/40 bg-white/10 backdrop-blur-sm px-8 py-3.5 text-base font-semibold text-white hover:bg-white/20 transition-colors"
             >
-              Get a Free Quote
-            </OpenChatButton>
+              Text Us
+            </a>
+            <a
+              href={telHref()}
+              className="inline-flex items-center gap-2 rounded-full border-2 border-white/40 bg-white/10 backdrop-blur-sm px-8 py-3.5 text-base font-semibold text-white hover:bg-white/20 transition-colors"
+            >
+              Call {siteConfig.phoneFormatted}
+            </a>
           </div>
+          <p className="mt-5 mx-auto max-w-2xl text-sm font-medium text-sky-100">
+            We are not the cheapest pool company. We are for people who want
+            the pool clean, documented, and off their plate.
+          </p>
           {/* Van photo */}
           <div className="mt-12 mx-auto max-w-2xl">
             <Image
-              src="/images/pcd-van.jpg"
-              alt="Pool Cleaning Dude service van"
+              src="/images/brandon-pool.jpg"
+              alt="Brandon at a customer's pool after a visit"
               width={940}
               height={627}
               className="rounded-2xl shadow-2xl border-2 border-white/20"
               priority
             />
+            <p className="mt-3 text-sm text-sky-100">
+              That&apos;s Brandon. He actually does the work.
+            </p>
           </div>
         </div>
         <WaveDecoration />
@@ -119,13 +152,71 @@ export default function Home() {
       {/* Trust bar */}
       <section className="border-y border-gray-100 py-6 px-4">
         <div className="mx-auto max-w-4xl flex flex-wrap items-center justify-center gap-8 text-sm text-gray-500 font-medium">
-          <span>No Contracts</span>
-          <span className="hidden sm:inline text-gray-300">|</span>
-          <span>Licensed &amp; Insured</span>
-          <span className="hidden sm:inline text-gray-300">|</span>
-          <span>Locally Owned</span>
-          <span className="hidden sm:inline text-gray-300">|</span>
-          <span>Satisfaction Guaranteed</span>
+          {routeSignals.map((signal, index) => (
+            <span key={signal} className="contents">
+              <span>{signal}</span>
+              {index < routeSignals.length - 1 && (
+                <span className="hidden sm:inline text-gray-300">|</span>
+              )}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      {/* High-intent offers */}
+      <section className="bg-white py-16 px-4">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.35fr] gap-10 items-start">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-wide text-sky-600 mb-3">
+                Built for Main Line homeowners
+              </p>
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-4">
+                The pool stays ready without becoming your second job.
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                If you want the lowest one-off visit, we are probably not it.
+                If you want the same local crew watching the water, catching
+                equipment issues early, and texting proof after the visit, we
+                are built for that.
+              </p>
+              <Link
+                href="/contact-us"
+                className="inline-flex items-center rounded-full bg-sky-600 px-6 py-3 text-sm font-semibold text-white hover:bg-sky-700 transition-colors"
+              >
+                Tell Us About Your Pool
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {highIntentReasons.map((reason) => {
+                const card = (
+                  <>
+                    <h3 className="text-base font-semibold text-gray-900 mb-2">
+                      {reason.title}
+                    </h3>
+                    <p className="text-sm leading-relaxed text-gray-600">
+                      {reason.text}
+                    </p>
+                  </>
+                );
+                const className =
+                  "rounded-lg border border-gray-200 bg-gray-50 p-5 h-full";
+                return "href" in reason && reason.href ? (
+                  <Link
+                    key={reason.title}
+                    href={reason.href}
+                    className={`${className} hover:border-sky-300 transition-colors`}
+                  >
+                    {card}
+                  </Link>
+                ) : (
+                  <div key={reason.title} className={className}>
+                    {card}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -148,6 +239,11 @@ export default function Home() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {service.name}
                 </h3>
+                {"startingAt" in service && service.startingAt && (
+                  <p className="text-sm font-semibold text-sky-700 mb-2">
+                    Starting at {service.startingAt}
+                  </p>
+                )}
                 <p className="text-sm text-gray-600 leading-relaxed">
                   {service.shortDesc}
                 </p>
@@ -162,6 +258,29 @@ export default function Home() {
               View All Services &rarr;
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Closing season */ }
+      <section className="bg-sky-50 py-12 px-4">
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="text-sm font-semibold uppercase tracking-wide text-sky-600 mb-3">
+            Closing season
+          </p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Get the cover on before the rush.
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto mb-6">
+            Closings start at $400. That covers the cover and shutting the
+            equipment down. Standard is $550 if you want winterization
+            chemicals included.
+          </p>
+          <Link
+            href="/pool-closing"
+            className="inline-flex items-center rounded-full bg-sky-600 px-6 py-3 text-sm font-semibold text-white hover:bg-sky-700 transition-colors"
+          >
+            Book a Closing
+          </Link>
         </div>
       </section>
 
